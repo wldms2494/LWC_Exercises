@@ -5,7 +5,7 @@
         "lightningExperienceSettings": {
 			"enableS1DesktopEnabled": true
         },
-        "mobileSettings": {
+        "mobileSettings": { "enableS1EncryptedStoragePref2": false
         },
         "languageSettings": {
             "enableTranslationWorkbench": true
