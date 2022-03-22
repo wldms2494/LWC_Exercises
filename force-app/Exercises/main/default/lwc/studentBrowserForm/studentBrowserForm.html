@@ -1,11 +1,23 @@
 <template>
     <div class="slds-var-m-bottom_small">
     <lightning-card title="Filter Student" icon-name="utility:search">
-        <div class="slds-var-p-horizontal_small">
-            <h1 class="crazycomic">Filter form goes here</h1>
+       <lightning-layout horizontal-align="center">
+           <!-- Instructors drop-down-->
+           <lightning-layout-item padding="around-small" size="4">       
+            <lightning-combobox name="instructor" label="Select Instructor" variant="label-hidden" options={instructors} value={selectInstructorId} onchange={onInstructorChange} placeholder="Select an
+            instructor">
 
-        </div>
-        
+            </lightning-combobox>        
+           </lightning-layout-item>
+           <!--Deliveries-->
+           <lightning-layout-item padding="around-small" size="4">  
+               <lightning-combobox name="deliverySelector" label="SelectDelivery" variant="label-hidden" value={selectedDeliveryId} placeholder="Select a delivery" options={deliveries} onchange={onDeliveryChange}></lightning-combobox>            
+           </lightning-layout-item>
+
+           <lightning-layout-item padding="around-small">
+               <lightning-button variant="brand" disabled={isButtonDisabled} label="Add new Delivery" onclick={onAddNewDelivery}></lightning-button>
+           </lightning-layout-item>
+       </lightning-layout>
     
 </lightning-card>    
 </div>
