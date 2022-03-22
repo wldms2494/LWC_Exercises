@@ -1,8 +1,8 @@
 import { LightningElement, wire } from 'lwc';
 import {NavigationMixin} from 'lightning/navigation';
 import {encodeDefaultFieldValues} from 'lightning/pageReferenceUtils'
-import getInstructors from '@salesforce/apex/studentBrowserForm.getInstructors';
-import getDeliveriesByInstructor from '@salesforce/apex/studentBrowserForm.getDeliveriesByInstructor';
+import getInstructors from '@salesforce/apex/StudentBrowserForm.getInstructors';
+import getDeliveriesByInstructor from '@salesforce/apex/StudentBrowserForm.getDeliveriesByInstructor';
 
 
 export default class StudentBrowserForm extends NavigationMixin(LightningElement) {

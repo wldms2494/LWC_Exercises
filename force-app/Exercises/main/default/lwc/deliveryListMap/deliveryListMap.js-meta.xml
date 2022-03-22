@@ -8,8 +8,7 @@
     <targetConfigs>
         <targetConfig targets="lightning__AppPage">
             <property name="listView" label="List View" type="String" datasource="visible,hidden"/>
-            <property name="markersTitle" label="List Title ( if visible)" type="String" />
-            
+            <property name="markersTitle" label="List Title ( if visible)" type="String"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
