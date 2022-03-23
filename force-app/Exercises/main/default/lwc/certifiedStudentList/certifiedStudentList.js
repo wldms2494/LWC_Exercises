@@ -5,7 +5,14 @@ export default class CertifiedStudentList extends LightningElement {
     @api certificationId=0;
     @api certificationName='';
     certifiedStudents;
+    btnGroupDisabled =true;
     error;
+    
+
+    onRowSelection(event){
+        const numSelected=event.detail.selectedRows.length;
+        this.btnGroupDisabled=(numSelected ===0);
+    }
 
     columnConfig = [
         {
