@@ -20,6 +20,11 @@ export default class ResponsiveDatatable extends LightningElement {
 		}
 	}
 	
+	@api setSelectedRecord(recordId){
+		const mySelector = `tr[data-pk='${recordId}']`;
+		const selectedRow = this.template.querySelector(mySelector);
+		if(selectedRow){this.highlightSelectedRow(selectedRow);}
+	}
 
 	highlightSelectedRow(target){
 		if(this._selectedRow)
