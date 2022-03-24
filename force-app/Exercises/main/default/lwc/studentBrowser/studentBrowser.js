@@ -4,13 +4,33 @@ import SELECTED_STUDENT_CHANNEL from '@salesforce/messageChannel/SelectedStudent
 import getStudents from '@salesforce/apex/StudentBrowser.getStudents';
 export default class StudentBrowser extends LightningElement {
     
-    @wire(MessageContext) messageContext;
-
-    
+    @wire(MessageContext) messageContext;    
     selectedDeliveryId='';
     selectedInstructorId='';
     @wire(getStudents, {instructorId:"$selectedInstructorId", courseDeliveryId:"$selectedDeliveryId"})
     students;
+
+    cols = [
+        {
+            fieldName:"Name",
+            label: "Name"
+            },
+            {
+            fieldName:"Title",
+            label: "Title",
+            hiddenOnMobile: true
+            },
+            {
+            fieldName:"Phone",
+            label: "Phone",
+            type: "phone"
+            },
+            {
+            fieldName:"Email",
+            label: "E-Mail",
+            type: "email"
+        }
+            ];
 
     handleFilterChange(event){
         this.selectedInstructorid = event.detail.instructorId;
