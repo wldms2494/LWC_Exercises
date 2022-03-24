@@ -1,5 +1,6 @@
 import { LightningElement, api } from 'lwc';
 
+
 export default class ResponsiveDatatable extends LightningElement {
 
 	@api columnConfig;
