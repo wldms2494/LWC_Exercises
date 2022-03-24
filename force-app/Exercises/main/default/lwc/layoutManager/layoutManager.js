@@ -1,11 +1,17 @@
 import { LightningElement } from 'lwc';
+import Utils from 'c/utils';
 
 const VIEW_STUDENT_BROWSER = 'students';
 const VIEW_TRIP_REPORTS = 'tripreports';
 const VIEW_CERTIFICATION = 'certifiedStudents';
 const VIEW_POPULARITY = 'certPopularity';
 
+
 export default class LayoutManager extends LightningElement {
+	connectedCallback(){
+	Utils.showToast(this,'Welcome',"Don't forget to check back here for updated class schedules and assignments", 'info');
+	}
+	
 
 	viewMode = VIEW_STUDENT_BROWSER;
 	certificationName = '';
